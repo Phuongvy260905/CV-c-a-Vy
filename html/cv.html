@@ -1,0 +1,142 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cv.css">
+    <title>Nguyễn Ngọc Phương Vy - CV</title>
+  </head>
+  <body>
+     <button class="hamburger" aria-label="Mở menu" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <a href="#hero" onclick="closeSidebar()">Trang chủ</a>
+      <a href="#about" onclick="closeSidebar()">Giới thiệu</a>
+      <a href="#career" onclick="closeSidebar()">Mục tiêu</a>
+      <a href="#skills" onclick="closeSidebar()">Sở thích & Kỹ năng</a>
+      <a href="#languages" onclick="closeSidebar()">Ngôn ngữ</a>
+      <a href="#awards" onclick="closeSidebar()">Chứng chỉ/Giải thưởng</a>
+      <a href="#projects" onclick="closeSidebar()">Dự án</a>
+      <a href="#contact" onclick="closeSidebar()">Liên hệ</a>
+      <a href="" onclick="closeSidebar()">Quay lại trang chính</a>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <section id="hero" class="hero">
+      <h1>Xin chào tôi là Vy</h1>
+      <p>This is my portfolio</p>
+    </section>
+
+    <section id="about">
+      <h2>Giới thiệu bản thân</h2>
+      <div class="about-flex">
+        <img class="avatar" src="avt.jpg" alt="Avatar Nguyễn Ngọc Phương Vy">
+        <div>
+          <p>Xin chào! Mình là Nguyễn Ngọc Phương Vy, sinh viên ngành Công nghệ thông tin</p>
+          <ul>
+            <li><b>Ngày sinh:</b> 26/09/2005</li>
+            <li><b>Giới tính:</b> Nữ</li>
+            <li><b>Địa chỉ:</b> 56/3b, ấp Tam Đông, xã Thới Tam Thôn, Hóc Môn, TP. Hồ Chí Minh</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="career">
+      <h2>Mục tiêu nghề nghiệp</h2>
+      <p>Mong muốn phát triển tất cả các kỹ năng và năng lực của bản thân để biết thêm nhiều kiến thức và trở thành một Tester chuyên nghiệp</p>
+    </section>
+
+    <section id="skills">
+      <h3>Sở thích</h3>
+      <ul class="interests-list">
+        <li>Thể thao </li>
+        <li>Ca hát</li>
+        <li>Du lịch</li>
+      </ul>
+      <h3>Kỹ năng</h3>
+      <ul class="skills-list">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>ReactJS</li>
+        <li>Git</li>
+        <li>SQL</li>
+        <li>Django</li>
+        <li>C/C++</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2>Ngôn ngữ đã học</h2>
+      <ul>
+        <li>Tiếng Việt (Bản ngữ)</li>
+        <li>Tiếng Anh</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Chứng chỉ / Giải thưởng</h2>
+      <ul>
+        <li>Chứng chỉ: Không có</li>
+        <li>Giải thưởng: Không có</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Dự án</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Wesbite quản lí sân cầu lông</h3>
+          <p>Sử dụng framework Django và SQL server để tạo dựng trang web quản lí đặt lịch sân cầu lông.</p>
+        </div>
+        <div class="project-card">
+          <h3>Webiste điều trị HIV</h3>
+          <p>Phát triển website chuyên cung cấp các kiến thức, thông tin về bệnh HIV, liên hệ với với các bác sĩ chuyên ngành truyền nhiễm, được hỗ trợ đặt lịch điều trị.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <ul class="contact-list">
+        <li><b>Email:</b> vynnp6064@ut.edu.vn</li>
+        <li><b>GitHub:</b> github.com/truongminhkhang</li>
+        <li><b>Facebook</b> https://www.facebook.com/share/18uHCbjLJa/</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2025 Nguyễn Ngọc Phương Vy. All rights reserved.
+    </footer>
+  </div>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+    function closeSidebar() {
+      if(window.innerWidth <= 700) {
+        document.getElementById('sidebar').classList.remove('open');
+      }
+    }
+    document.addEventListener('click', function(e) {
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.querySelector('.hamburger');
+      if(window.innerWidth <= 700 && sidebar.classList.contains('open')) {
+        if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+          sidebar.classList.remove('open');
+        }
+      }
+    });
+    window.addEventListener('resize', function() {
+      if(window.innerWidth > 700) {
+        document.getElementById('sidebar').classList.remove('open');
+      }
+    });
+  </script>
+  </body>
+  </html>
+ 
