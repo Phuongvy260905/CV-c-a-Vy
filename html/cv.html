@@ -1,10 +1,11 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/cv.css">
     <title>Nguyễn Ngọc Phương Vy - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
      <button class="hamburger" aria-label="Mở menu" onclick="toggleSidebar()">
@@ -22,7 +23,7 @@
       <a href="#awards" onclick="closeSidebar()">Chứng chỉ/Giải thưởng</a>
       <a href="#projects" onclick="closeSidebar()">Dự án</a>
       <a href="#contact" onclick="closeSidebar()">Liên hệ</a>
-      <a href="" onclick="closeSidebar()">Quay lại trang chính</a>
+      <a href="https://khanguth.github.io/Main-Page/" onclick="closeSidebar()">Quay lại trang chính</a>
     </nav>
   </aside>
   <div class="main-content">
@@ -34,7 +35,7 @@
     <section id="about">
       <h2>Giới thiệu bản thân</h2>
       <div class="about-flex">
-        <img class="avatar" src="avt.jpg" alt="Avatar Nguyễn Ngọc Phương Vy">
+        <img class="avatar" src="/img/z6666671977270_dca6c3ebfdc44ba6f7f0ae7c22382a08.jpg" alt="Avatar Nguyễn Ngọc Phương Vy">
         <div>
           <p>Xin chào! Mình là Nguyễn Ngọc Phương Vy, sinh viên ngành Công nghệ thông tin</p>
           <ul>
@@ -48,7 +49,7 @@
 
     <section id="career">
       <h2>Mục tiêu nghề nghiệp</h2>
-      <p>Mong muốn phát triển tất cả các kỹ năng và năng lực của bản thân để biết thêm nhiều kiến thức và trở thành một Tester chuyên nghiệp</p>
+      <p> Tôi muốn được phát triển năng lực, kỹ năng lập trình, hoàn thiện các sản phẩm phần mềm đáp ứng được yêu cầu khách hàng, nâng tầm thương hiệu công ty và vươn đến những vị trí cao hơn với vị trí lập trình viên.
     </section>
 
     <section id="skills">
@@ -86,7 +87,7 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="projects"> 
       <h2>Dự án</h2>
       <div class="projects">
         <div class="project-card">
@@ -101,12 +102,18 @@
     </section>
 
     <section id="contact">
-      <h2>Liên hệ</h2>
-      <ul class="contact-list">
-        <li><b>Email:</b> vynnp6064@ut.edu.vn</li>
-        <li><b>GitHub:</b> github.com/truongminhkhang</li>
-        <li><b>Facebook</b> https://www.facebook.com/share/18uHCbjLJa/</li>
-      </ul>
+      <h2><i class="fa-solid fa-address-book"></i> Liên hệ</h2>
+      <div class="contact-icons">
+        <a href="mailto:vynnp6064@ut.edu.vn" target="_blank" title="Gửi email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/Phuongvy260905" target="_blank" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.facebook.com/share/18uHCbjLJa/" target="_blank" title="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
     </section>
 
     <footer>
@@ -137,6 +144,24 @@
       }
     });
   </script>
+  <style>
+.contact-icons {
+  display: flex;
+  gap: 22px;
+  margin: 18px 0 8px 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-icons a {
+  color: #7c6fa6;
+  font-size: 2em;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.contact-icons a:hover {
+  color: #b799ff;
+  transform: scale(1.18);
+}
+</style>
   </body>
   </html>
- 
